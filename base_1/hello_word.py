@@ -1,12 +1,13 @@
 # coding=utf-8
-# 测试脚本
+# hello word 脚本
 
 def main():
     '''
     主函数
     :return:
     '''
-    print('test main ......')
+    print('hello word')
+
 
 if __name__ == '__main__':
 	main()
