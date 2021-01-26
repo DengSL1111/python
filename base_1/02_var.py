@@ -112,8 +112,57 @@ def list_var():
     print('({})列表取从第6个变量到最后作为字列表:({})'.format(one_list, right_list))
     print('({})列表取第2到第6个变量作为子列表:({})'.format(one_list, middle_list))
 
+    print('-----list删除----')
+    old_list = ['a', 'b', 'c']
+
+    one_list = ['a', 'b', 'c']
+    one_list.pop()
+    print('({})pop删除第一个元素后结果为:({})'.format(old_list, one_list))
+
+    one_list = ['a', 'b', 'c']
+    one_list.remove('b')
+    print('({})pop删除值为b元素后结果为:({})'.format(old_list, one_list))
+
+
     print('\n\n')
     return
+
+def dict_var():
+    '''
+    dict字典相关的操作
+    :return:
+    '''
+    print('---------------字典(dict，键值对)---------------')
+    one_dict = {}
+    two_dict = {'dkey': 'value'}
+    three_dict = {'1key': 'value', '2key': 11, '2key': [1, 2, 3], '3key': {'11': 22}}
+    print(one_dict)
+    print(two_dict)
+    print(three_dict)
+
+    print('-----dict内容(取值、增加、删除)----')
+    test_dict = {'1key': '1value', '2key': '2value'}
+    value = test_dict.get('1key')
+    print('1key的值为:{}'.format(value))
+
+    test_dict['3key'] = '3value'
+    print(test_dict)
+
+    old_dict  = {'1key': '1value', '2key': '2value'}
+    test_dict = {'1key': '1value', '2key': '2value'}
+    test_dict.pop('1key')
+    print('{} pop 1key, res:{}'.format(old_dict, test_dict))
+
+    test_dict = {'1key': '1value', '2key': '2value'}
+    del test_dict['1key']
+    print('{} del 1key, res:{}'.format(old_dict, test_dict))
+
+    print('-----dict内容(keys values)----')
+    test_dict = {'1key': '1value', '2key': '2value'}
+    kes = test_dict.keys()
+    values = test_dict.values()
+    print('{} keys:{}, values:{}'.format(test_dict, kes, values))
+
 
 def main():
     '''
@@ -124,6 +173,7 @@ def main():
     int_var()
     str_var()
     list_var()
+    dict_var()
 
 
     print('\n\n')
