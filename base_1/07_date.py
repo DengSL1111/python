@@ -6,13 +6,6 @@ import time
 import datetime
 
 
-
-
-
-
-
-
-
 def time_func():
     ''''
     '''
@@ -29,7 +22,7 @@ def time_func():
     print('本地时间 : {}'.format(str_time))
 
     print('time.sleep 休眠3秒')
-    #time.sleep(3)
+    time.sleep(3)
     print('休眠3秒结束')
 
     print('\n----------datetime----------')

@@ -1,24 +1,12 @@
 # coding=utf-8
-# python基本语法(异常处理)
+# python基本语法(os sys系统库祥光操作)
 #
 #
 
-def test_except(test_var):
-    '''
-    测试异常变量
-    :param test_var:
-    :return:
-    '''
-
-    try:
-        i_var = 1 + test_var
-        a_var = 1 / test_var
-    except TypeError as typ_ex:
-        print('捕获到变量类型错误：{}'.format(typ_ex))
-    except ZeroDivisionError as zero_ex:
-        print('捕获到除法操作错误：{}'.format(zero_ex))
-    finally:
-        print('不管有没有异常，都到这里来')
+import os
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 
 def main():
@@ -27,19 +15,17 @@ def main():
     :return:
     '''
 
-    try:
-        i_var = 1 +'string'
-    except Exception as ex:
-        print('捕获到异常：{}'.format(ex))
+    os.system('pwd')
 
-    try:
-        i_var = 1 +'string'
-    except TypeError as ex:
-        print('捕获到变量类型错误：{}'.format(ex))
+    path = '/tmp'
+    print('{} is exists :{}'.format(path, os.path.exists(path)))
+    print('{} is file :{}'.format(path, os.path.isfile(path)))
+    print('{} is dir :{}'.format(path, os.path.isdir(path)))
 
-    test_except('string')
-    test_except(0)
-    test_except(2)
+    print('当前进程第1个参数:{}'.format(sys.argv[0]))
+    print('当前运行平台操作系统 : {}'.format(sys.platform))
+
+    #sys.exit(0)        #强制退出进程
 
 
 
