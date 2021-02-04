@@ -33,10 +33,11 @@ def main():
         print('捕获到异常：{}'.format(ex))
 
     try:
-        i_var = 1 +'string'
+        i_var = 1/'string'
     except TypeError as ex:
         print('捕获到变量类型错误：{}'.format(ex))
 
+    print('\n函数参数异常测试')
     test_except('string')
     test_except(0)
     test_except(2)

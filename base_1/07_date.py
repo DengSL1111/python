@@ -17,6 +17,7 @@ def time_func():
     ''''
     '''
 
+    print('----------time----------')
     cur_time = time.time()
     print('当前时间戳 : {}'.format(cur_time))
 
@@ -28,13 +29,32 @@ def time_func():
     print('本地时间 : {}'.format(str_time))
 
     print('time.sleep 休眠3秒')
-    time.sleep(2)
+    #time.sleep(3)
     print('休眠3秒结束')
 
+    print('\n----------datetime----------')
     today = datetime.date.today()
-    print('today is : {}'.format(today))
+    print('今天是 : {}'.format(today))
 
+    cur_dt = datetime.datetime.now()
+    str_dt = datetime.datetime.strftime(cur_dt, '%Y-%m-%d %H:%M:%S')
+    print('现在是(时间对象) : {}'.format(cur_dt))
+    print('现在是(时间字符串) : {}'.format(str_dt))
 
+    str_p = '2019-01-30 10:10:10'
+    date_p = datetime.datetime.strptime(str_p, '%Y-%m-%d %H:%M:%S')
+    print('时间字符串({})转成时间对象为:{}'.format(str_dt, date_p))
+
+    today = datetime.datetime.now()
+    pre_hour = today + datetime.timedelta(hours=-1)
+    next_hourt = today + datetime.timedelta(hours=1)
+    yestoday = today + datetime.timedelta(days=-1)
+    tomorrow = today + datetime.timedelta(days=1)
+    print('现在是 : {}'.format(today))
+    print('现在的前一个小时是 : {}'.format(pre_hour))
+    print('现在的后一个小时是 : {}'.format(next_hourt))
+    print('昨天的现在是 : {}'.format(yestoday))
+    print('明天的现在是 : {}'.format(tomorrow))
 
 
 def main():
