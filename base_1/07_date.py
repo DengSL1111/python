@@ -16,8 +16,12 @@ def time_func():
 
     localtime = time.localtime()
     print('本地时间 : {}'.format(localtime))
-    print('本地时间 : {}-{}-{} {}:{}:{}'.format(localtime.tm_year, localtime.tm_mon, localtime.tm_mday,
-                                          localtime.tm_hour, localtime.tm_min, localtime.tm_sec))
+    print('本地时间 : {}-{}-{} {}:{}:{}'.format(localtime.tm_year,
+                                            localtime.tm_mon,
+                                            localtime.tm_mday,
+                                            localtime.tm_hour,
+                                            localtime.tm_min,
+                                            localtime.tm_sec))
     str_time = time.strftime("%Y-%m-%d %H:%M:%S", localtime)
     print('本地时间 : {}'.format(str_time))
 
@@ -36,7 +40,7 @@ def time_func():
 
     str_p = '2019-01-30 10:10:10'
     date_p = datetime.datetime.strptime(str_p, '%Y-%m-%d %H:%M:%S')
-    print('时间字符串({})转成时间对象为:{}'.format(str_dt, date_p))
+    print('时间字符串({})转成时间对象为:{}'.format(str_p, date_p))
 
     today = datetime.datetime.now()
     pre_hour = today + datetime.timedelta(hours=-1)

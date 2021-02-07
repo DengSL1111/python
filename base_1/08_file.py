@@ -63,10 +63,10 @@ def file_read_ini():
     读取ini文件
     :return:
     '''
-    deal_conf = ConfigParser.ConfigParser()
-    deal_conf.read('/tmp/user.ini')
-    username = deal_conf.get('weixin', 'user')
-    passwd = deal_conf.get('weixin', 'passwd')
+    config = ConfigParser.ConfigParser()
+    config.read('user.ini')
+    username = config.get('weixin', 'user')
+    passwd = config.get('weixin', 'passwd')
     print('user.ini 读取weixin节点 user:{}  passwd:{}'.format(username, passwd))
 
 
