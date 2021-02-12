@@ -10,7 +10,6 @@ def main():
     :return:
     '''
 
-
     try:
         param_check.check_int(10)
         param_check.check_int('aaaa')
