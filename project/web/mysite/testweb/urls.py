@@ -8,7 +8,4 @@ from testweb import views
     
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='crawler-home'),
-    url(r'^$', views.CrawlerAddView.as_view(), name='crawler-add'),
-    url(r'^$', views.SearchView.as_view(), name='crawler-search'),
-
 ]

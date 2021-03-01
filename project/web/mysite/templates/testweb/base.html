@@ -46,10 +46,6 @@
     <body>
         <div id="header">
         <h1>关键字配置</h1>
-            <form action="{% url 'crawler-search' %}" method="get">
-                <a href="{% url 'crawler-home' %}">首页</a>
-                <label for="q"> &bull; 搜索:</label> <input type="text" name="q">
-            </form>
         </div>
         {% block content %}
         {% endblock %}

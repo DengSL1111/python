@@ -4,26 +4,25 @@
         <h2>{{ heading }}</h2>
     {% endif %}
 
-    <a href="http://www.stackoverflow.com/">
-    <button style="background-color: #7ED321;color: #FFFFFF;width:100px;height:30px">新增</button>
-    </a>
 
     <table class="imagetable"  border="1" width="100%">
         <tr>
             <th>关键字</th>
-            <th>起始页</th>
-            <th>结束页</th>
-            <th>结果</th>
-            <th>删除</th>
+            <th>主机IP</th>
+            <th>归属地</th>
+            <th>主域名</th>
+            <th>关联域名</th>
+            <th>详情</th>
         </tr>
 
     {% for crawler in crawler_list %}
         <tr>
-            <td><a href="{{ crawler.id }}">{{ crawler.keyword }}</a></td>
-            <td>{{ crawler.start_page }}</td>
-            <td>{{ crawler.end_page }}</td>
-            <td><a href="{{ crawler.id }}">详情</a></td>
-            <td><a href="{{ crawler.id }}">删除</a></td>
+            <td>{{ crawler.keyword }}</td>
+            <td>{{ crawler.host_ip }}</td>
+            <td>{{ crawler.belong }}</td>
+            <td>{{ crawler.main_dns }}</td>
+            <td>{{ crawler.link_dns }}</td>
+            <td><a href="/crawler/detail/{{ crawler.id }}">详情</a></td>
         </tr>
 
     {% endfor %}

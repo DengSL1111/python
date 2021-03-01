@@ -12,8 +12,13 @@ class CrawlerConf(models.Model):
     end_page = models.IntegerField()
     extra = models.TextField(null=True)
 
-    def __str__(self):
-        return self.id
+    # def __str__(self):
+    #     return self.id
+
+    class Meta:
+        verbose_name = u'关键字管理'
+        verbose_name_plural = u'关键字管理'
+        # app_label = u'关键字管理'
 
 
 class CrawlerRes(models.Model):
