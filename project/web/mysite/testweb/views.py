@@ -37,7 +37,6 @@ class IndexView(generic.ListView):
             res.append(tmp_res)
 
         return res
-        #return CrawlerConf.objects.all()
 
 
 class DetailView(generic.ListView):
