@@ -1,10 +1,41 @@
-﻿{% extends "cms/base.html" %}
-{% block title %}{{ story.title }}{% endblock %}
+﻿{% extends "testweb/base.html" %}
 {% block content %}
-    <h2>{{ story.title }}</h2>
-    <h3>分类：<a href="{% url 'cms-category' story.category.slug %}">{{ story.category }}</a></h3>
-    <div id="story-body">
-        {{ story.html_content|safe }}
-    <p class="small">更新于 {{ story.modified }}</p>
-    </div>
+    {% if heading %}
+        <h2>{{ heading }}</h2>
+    {% endif %}
+
+
+    <table class="imagetable"  border="1" width="100%">
+        <tr>
+            <th>项</th>
+            <th>详情</th>
+        </tr>
+
+         <tr>
+             <td>关键字</td>
+            <td>{{ crawler_detail.keyword }}</td>
+        </tr>
+
+        <tr>
+             <td>主机IP</td>
+            <td>{{ crawler_detail.host_ip }}</td>
+        </tr>
+
+        <tr>
+             <td>归属地</td>
+            <td>{{ crawler_detail.belong }}</td>
+        </tr>
+
+        <tr>
+             <td>主域名</td>
+            <td>{{ crawler_detail.main_dns }}</td>
+        </tr>
+
+        <tr>
+             <td>关联域名</td>
+            <td>{{ crawler_detail.link_dns }}</td>
+        </tr>
+
+    </table>
+
 {% endblock %}

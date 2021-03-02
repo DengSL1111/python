@@ -24,12 +24,8 @@ class CrawlerConfAdmin(admin.ModelAdmin):
     #=======
     def detail(self, obj):
         #return '<a href="%s%s">%s</a>' % ('http://url-to-prepend.com/', obj.url_field, obj.url_field)
-        detail_html = u'<a href="/crawler/{}">详情</a>'.format(obj.id)
+        detail_html = u'<a href="/crawler/">详情</a>'
         return format_html(detail_html)
-
-    #<a href="/admin/testweb/crawlerconf/1/change/">我的世界</a>
-    #<td class="field-detail">&lt;a href="/admin/testweb/crawlerconf/1/change/"&gt;详情&lt;/a&gt;</td>
-    #<th class="field-keyword"><a href="/admin/testweb/crawlerconf/1/change/">我的世界</a></th>
 
     detail.allow_tags = True
     detail.short_description = 'detail'

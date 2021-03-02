@@ -22,7 +22,7 @@
             <td>{{ crawler.belong }}</td>
             <td>{{ crawler.main_dns }}</td>
             <td>{{ crawler.link_dns }}</td>
-            <td><a href="/crawler/detail/{{ crawler.id }}">详情</a></td>
+            <td><a href="/crawler/detail/?crawler_id={{ crawler.id }}">详情</a></td>
         </tr>
 
     {% endfor %}
