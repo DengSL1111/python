@@ -26,10 +26,10 @@ class CrawlerRes(models.Model):
     结果表
     '''
     id = models.AutoField(primary_key=True, unique=True, auto_created=True)
-    craw_id = models.IntegerField(unique=True)
-    host_ip = models.CharField(max_length=255, unique=True)
-    belong = models.CharField(max_length=255, unique=True)
-    main_dns = models.CharField(max_length=255, unique=True)
+    craw_id = models.IntegerField()
+    host_ip = models.CharField(max_length=255)
+    belong = models.CharField(max_length=255)
+    main_dns = models.CharField(max_length=255)
     link_dns = models.TextField(null=True)
     extra = models.TextField(null=True)
 
@@ -42,11 +42,11 @@ class OprLog(models.Model):
     操作日志
     '''
     id = models.AutoField(primary_key=True, unique=True, auto_created=True)
-    status = models.CharField(max_length=255, unique=True)
-    action = models.CharField(max_length=255, unique=True)
-    start_time = models.CharField(max_length=255, unique=True)
-    end_time = models.CharField(max_length=255, unique=True)
-    user_id = models.CharField(max_length=255, unique=True)
-    user_name = models.CharField(max_length=255, unique=True)
-    desc = models.CharField(max_length=255, unique=True)
+    status = models.CharField(max_length=255)
+    action = models.CharField(max_length=255)
+    start_time = models.CharField(max_length=255)
+    end_time = models.CharField(max_length=255)
+    user_id = models.CharField(max_length=255)
+    user_name = models.CharField(max_length=255)
+    desc = models.CharField(max_length=255)
     extra = models.TextField(null=True)
